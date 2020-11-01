@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Secret-Board
+  body
+    h1 Secret-Board
+    h2 New post
+    form(method="post" action="/posts")
+      div
+        textarea(name="content" cols=40 rows=4)
+      div
+        button(type="submit") Post
