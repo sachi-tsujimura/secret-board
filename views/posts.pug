@@ -14,6 +14,7 @@ html(lang="en")
       button(type="submit") Post
   h2 Post List
   each post in posts
+    h3 #{post.id} : ID:#{post.trackingCookie}
     p #{post.content}
     p Posted Date: #{post.createdAt}
   hr
