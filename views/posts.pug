@@ -5,9 +5,15 @@ html(lang="en")
     title Secret-Board
   body
     h1 Secret-Board
-    h2 New post
-    form(method="post" action="/posts")
-      div
-        textarea(name="content" cols=40 rows=4)
-      div
-        button(type="submit") Post
+  a(href = '/logout') Logout
+  h2 New post
+  form(method="post" action="/posts")
+    div
+      textarea(name="content" cols=40 rows=4)
+    div
+      button(type="submit") Post
+  h2 Post List
+  each post in posts
+    p #{post.content}
+    p Posted Date: #{post.createdAt}
+  hr
